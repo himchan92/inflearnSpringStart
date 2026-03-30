@@ -6,7 +6,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class MemberServiceTest {
 
-    MemberService memberService = new  MemberServiceImpl();
+    MemberService memberService;
+
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     @Test
     void join() {
